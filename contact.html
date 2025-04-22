@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <meta name ="author" content="Rucha Nimbalkar">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css" >
+        <link rel="icon" type="image/png" href="images/mysoapslogo.png">
+
+        <title> My Soaps</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo logo-and-h1"><a href="index.html"><img src="images/mysoapslogo.png" alt="my soaps logo"></a>
+                <h1>My Soaps</h1>
+            </div>
+       
+      
+
+            <nav>
+              <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="cart.html" target="_blank">Cart <span class="badge hide"> </span>&#128722;</a></li>
+              </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Buy custom soaps here!</h2>
+            <div class="form-container">
+                <form id="contact-form">    
+                    <h3>Please Contact Us!</h3>
+                    <fieldset>
+                        <legend> Personal Information</legend>
+                        <p>
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="name" required>
+                        </p>
+
+                        <p>
+                            <label for="city">Location City</label>
+                            <input type="text" id="city" name="city" required>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Contact Information</legend>
+
+                        <p>
+                            <label for="email"> &#128231; Email address : </label>
+                            <input id="email" type="email" name="email" size="30" required>
+                        </p>
+
+                        <p>
+                            <label for="phone"> &#128241; Phone number : </label>
+                            <input id="phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="10" required>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend> Choose Soap</legend>
+                        <select name="choice">
+                            <option value=" ">--Select Soap--</option>
+                            <option value="blue gummmy soap">Blue Gummy Soap</option>
+                            <option value="cucumber soap">Cucumber Soap</option>
+                            <option value="fullers earth soap">Fullers Earth Soap</option>
+                            <option value="heart shaped soap">Heart Shaped Soap</option>
+                            <option value="jamsine soap">Jasmine Soap</option>
+                            <option value="lemon soap">Lemon Soap</option>
+                            <option value="neem mint basil lemon soap">Neem Mint Basil Lemon Soap</option>
+                            <option value="neem soap">Neem Soap</option>
+                            <option value="rose soap">Rose Soap</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Questions for??</legend>
+                        <label for="bulk"> <input type="radio" id="bulk" name="order" value="bulk">Bulk order</label>
+                        <label for="individual"> <input type="radio" id="individual" name="order" value="bulk">Individual order</label>                   
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Question(s)/Comments</legend>
+                        <p>
+                            <label for="comment">Write here: </label>
+                            <textarea id="comment" name="comment"></textarea>
+                        </p>
+                    </fieldset>
+                   
+                    <button type="submit">Submit</button>
+                </form>
+            </div>           
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Rucha Nimbalkar <a href="" target="_blank">Rucha Nimbalkar</a>.</p>
+        </footer>
+        <script src="js/contact.js"></script>
+    </body>
+</html>
