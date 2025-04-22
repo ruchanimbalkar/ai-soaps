@@ -6,12 +6,8 @@ console.log("item count: ", itemCount);
 
 const spanBadge = document.querySelector(".badge"); //get the cart badge
 //const cartDiv = document.getElementsByClassName(".myclass");
-const cartDiv = document.querySelector(".myclass");
-console.log("cart div", cartDiv);//printing on console
-const headingTwo = document.querySelector(".cart-heading");//get the cart page heading 2
-console.log("h2",headingTwo);//print on console
-const headingTwoTest = document.getElementsByClassName(".cart-heading");//get the cart page heading 2
-console.log(headingTwoTest);
+
+
 const orderButton = document.querySelectorAll(".order-button");
 console.log("order button",orderButton);
 const blueSoapButton = document.querySelector(".blue-soap");
@@ -90,16 +86,22 @@ function cartTotal(soap){
     spanBadge.classList.remove("hide");
     spanBadge.innerHTML = itemCount;
   
-    const cartPage = document.querySelector(".myCart");
-    console.log("Cart Page", cartPage);
-    cartPage.addEventListener("click", updateCartMessage(itemCount));
+    // Store the value in localStorage
+    localStorage.setItem('itemCount', itemCount);
+
+    // Redirect to the second page
+    //window.location.href = 'cart.html';
+
+    // const cartPage = document.querySelector(".myCart");
+    // console.log("Cart Page", cartPage);
+    // cartPage.addEventListener("click", updateCartMessage(itemCount));
 }
   
-function updateCartMessage(itemCount){
-    console.log("On Cart Page");
-    let updatedCart=`You have ${itemCount} items in your cart`;
-    headingTwo.textContent = updatedCart;
-}
+// function updateCartMessage(itemCount){
+//     console.log("On Cart Page");
+//     let updatedCart=`You have ${itemCount} items in your cart`;
+//     headingTwo.textContent = updatedCart;
+// }
 
 blueSoapButton.addEventListener("click", function(){cartTotal("blue")});
 cucumberSoapButton.addEventListener("click", function(){cartTotal("cucumber")});

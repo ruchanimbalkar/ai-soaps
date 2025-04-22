@@ -77,31 +77,25 @@ header nav ul a:hover{
     background-color: var(--dark-green);
     border: 0.3rem ridge var(--faint-pink);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap:1rem;
     padding:1rem;
-    padding-right: 30rem;
+    /* padding-right: 30rem; */
 }
-.parent img{
-    border: 0.3rem dotted var(--light-pink);
-    width:400px;
-    grid-column: 1/2;
-    grid-row:1/3;
-    padding:0;
-    margin:0;
-}
-.parent h3,p{
-    color:var(--faint-pink);
-    grid-column: 2/3;
-}
+/* * {
+    border: 1px dashed red;
+  } */
+
+
 
 .about-heading{
     font-size: 2rem;
     font-weight: 900;
+    margin-bottom: 0;
 }
 
 .about-p{
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight:bolder;
 }
 
@@ -123,6 +117,9 @@ header nav ul a:hover{
     width: 300px;
 }
 
+.card img:hover{
+    border:0.6rem dotted var(--neem-green);
+}
 .card h3{
     color:var(--light-pink);
 }
@@ -170,6 +167,21 @@ footer{
     .container{
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .parent{
+        grid-template-columns: 1fr 1fr;
+    }
+    .parent img{
+        border: 0.3rem dotted var(--light-pink);
+        max-width: 100%;
+        grid-column: 1/2;
+        grid-row:1/3;
+        padding:0;
+        margin:0;
+    }
+    .parent h3,p{
+        color:var(--faint-pink);
+        grid-column: 2/3;
+    }
 }
 
 
@@ -185,11 +197,13 @@ form{
 }
 form h3{
     text-align: center;
+    color:var(--rose-pink);
     font-size: 1.6rem;
 }
 
 fieldset {
 	margin: 0.6rem auto 0 auto;
+    border:0.13rem ridge var(--rose-pink);
 }
 
 legend {

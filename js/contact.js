@@ -1,4 +1,12 @@
 //Contact form
+window.onload = function() { //set cart in nav
+    // Get the value from localStorage
+    let itemNumber = localStorage.getItem('itemCount');
+    const spanBadge = document.querySelector(".badge"); //get the cart badge
+    spanBadge.classList.remove("hide");
+    spanBadge.innerHTML = itemNumber;
+}
+
 const formContainerDiv= document.querySelector(".form-container");
 console.log("Form Container Div: ",formContainerDiv);
 const contactForm = document.querySelector("#contact-form");
@@ -40,7 +48,5 @@ function onSubmit(e){
     headingThree.styk
     formContainerDiv.appendChild(headingThree);
     formContainerDiv.removeChild(contactForm);
-
-    
 
 }
